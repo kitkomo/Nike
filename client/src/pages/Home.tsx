@@ -22,7 +22,7 @@ const Home: React.FC = () => {
 						<br />
 						and offers runners of all kinds a perfect fit.
 					</p>
-					<BasicButton to='/'>Shop</BasicButton>
+					<BasicButton to='/shop'>Shop</BasicButton>
 				</div>
 				<div className='my-10'>
 					<h2 className='font-medium capitalize text-xl mb-5'>
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
 						<img
 							className='absolute -bottom-24 z-0'
 							src='images/creativeArrow.svg'
-							alt=''
+							alt='//'
 						/>
 					</div>
 					<div className='w-80 h-80'>

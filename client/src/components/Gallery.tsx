@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery: React.FC = () => {
 	return (
-		<div className='grid grid-rows-2 grid-cols-4 gap-2 max-h-96 mt-7 mb-14 my-3'>
+		<div className='grid grid-rows-2 grid-cols-4 gap-2 max-h-96 mt-7 mb-14 my-3 mx-5'>
 			<div className='rounded-xl overflow-hidden drop-shadow-lg'>
 				<img
 					className='w-full h-full object-center object-cover'
