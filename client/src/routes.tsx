@@ -20,7 +20,11 @@ export const publicRoutes = [
 		element: <Home/>
 	},
 	{
-		path: '/auth',
+		path: '/login',
+		element: <Auth/>
+	},
+	{
+		path: '/register',
 		element: <Auth/>
 	},
 	{

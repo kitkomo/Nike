@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { observer } from 'mobx-react-lite';
+
 import Container from '../components/Container'
 import BasicButton from './../UI/BasicButton'
 import CategoryCard from '../components/CategoryCard'
 import ProductsSlider from '../components/ProductsSlider'
 import categories from '../assets/data/categories.json'
+import { RootStateContext } from '../store/RootStore';
 
-const Home: React.FC = () => {
+const Home: React.FC = observer(() => {
+	const {productStore} = React.useContext(RootStateContext)
 	return (
 		<>
 			<Container>
@@ -30,7 +34,7 @@ const Home: React.FC = () => {
 					</h2>
 					<div className='flex gap-6'>
 						{categories.map(data => (
-							<CategoryCard name={data.name} img={data.img} />
+							<CategoryCard key={data.name} name={data.name} img={data.img} />
 						))}
 					</div>
 				</div>
@@ -73,11 +77,11 @@ const Home: React.FC = () => {
 					<h2 className='font-medium capitalize text-xl mb-5'>
 						Kitkomo's favorites
 					</h2>
-					<ProductsSlider />
+					<ProductsSlider data={productStore.kitkomoFavorites}/>
 				</div>
 			</Container>
 		</>
 	)
-}
+})
 
 export default Home

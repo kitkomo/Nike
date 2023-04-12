@@ -7,32 +7,34 @@ import 'swiper/css/scrollbar'
 
 import ProductCard from './ProductCard'
 import SwiperButtons from './SwiperButtons'
+import { IProduct } from './../models/IProduct'
 
-const ProductsSlider: React.FC = () => {
+type ProductsSliderProps = {
+	data: IProduct[]
+}
+
+const ProductsSlider: React.FC<ProductsSliderProps> = ({ data }) => {
 	return (
 		<Swiper
 			modules={[Navigation, Scrollbar, A11y]}
 			spaceBetween={10}
 			slidesPerView={3}
 			pagination={{ clickable: true }}
-			scrollbar={{ draggable: true, hide: true}}
-			onSlideChange={() => console.log('slide change')}
-			onSwiper={swiper => console.log(swiper)}
+			scrollbar={{ draggable: true, hide: true }}
 			className='overflow-visible relative pt-3 pb-10'
 		>
-			<SwiperSlide>
-				<ProductCard />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ProductCard />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ProductCard />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ProductCard />
-			</SwiperSlide>
-			<SwiperButtons/>
+			{data.map(item => (
+				<SwiperSlide>
+					<ProductCard
+						key={item.name}
+						name={item.name}
+						price={item.price}
+						img={item.img}
+						gender={item.gender}
+					/>
+				</SwiperSlide>
+			))}
+			<SwiperButtons />
 		</Swiper>
 	)
 }

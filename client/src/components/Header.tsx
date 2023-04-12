@@ -5,8 +5,8 @@ import Search from '../UI/Search'
 
 const Header: React.FC = () => {
 	return (
-		<header className='bg-secondary my-3 px-14 py-2 rounded-full flex gap-10 justify-between items-center shadow-2xl mx-5'>
-			<Link to='/'>
+		<header className='bg-secondary my-3 px-14 py-2 rounded-xl flex gap-10 justify-between items-center shadow-2xl mx-5'>
+			<Link to='/' className='hover:opacity-50 transition-opacity'>
 				<img src='images/logo.svg' alt='nike' />
 			</Link>
 			<nav className='flex flex-grow gap-7 justify-between items-center'>
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
 							/>
 						</HeaderBtn>
 					</Link>
-					<Link to='/auth'>
+					<Link to='/login'>
 						<HeaderBtn>
 							<path
 								strokeLinecap='round'
