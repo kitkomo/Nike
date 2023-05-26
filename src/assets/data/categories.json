@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Jordan",
+		"img": "images/jordans"
+	},
+	{
+		"name": "Classic",
+		"img": "images/classics"
+	},
+	{
+		"name": "Air Max",
+		"img": "images/airmaxes"
+	}
+]
