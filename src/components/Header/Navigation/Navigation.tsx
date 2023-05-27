@@ -2,19 +2,24 @@
 
 import Link from 'next/link'
 import { FC } from 'react'
+
 import { navigationData } from './navigation.data'
+import cl from '../Header.module.scss'
 
 const Navigation: FC = () => {
 	return (
 		<nav>
-			<ul className='flex gap-4 text-sm font-medium'>
-			{
-				navigationData.map(link => (
-						<li>
-					<Link href="/shoes">Shoes</Link>
-				</li>
-				))
-			}
+			<ul className={cl.navList}>
+				{navigationData.map(link => (
+					<li key={link.path}>
+						<Link
+							href={link.path}
+							className={cl.navItem}
+						>
+							{link.label}
+						</Link>
+					</li>
+				))}
 			</ul>
 		</nav>
 	)

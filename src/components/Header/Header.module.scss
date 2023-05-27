@@ -1,0 +1,110 @@
+.header {
+	@apply mx-auto py-6 relative;
+
+	@media (max-width: 768px) {
+		@apply flex justify-between items-center;
+	}
+}
+
+.backdrop {
+	display: none;
+	@media (max-width: 768px) {
+		@apply backdrop-blur-sm animate-fade;
+		position: fixed;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100vh;
+		height: 100vh;
+		z-index: 99;
+	}
+}
+
+.navList {
+	@apply flex gap-4 text-sm font-medium;
+
+	@media (max-width: 450px) {
+			@apply flex-col;
+		}
+
+	.navItem {
+		@apply hover:text-neutral-400 transition-colors;
+
+		@media (max-width: 768px) {
+			@apply text-lg;
+		}
+	}
+}
+
+.navWrapper {
+	@apply flex justify-between items-center;
+
+	@media (max-width: 768px) {
+		@apply absolute flex-col gap-5 items-stretch right-0 bg-neutral-100 px-10 py-5 rounded-lg drop-shadow-2xl;
+		top: 100%;
+		display: none;
+		animation: bounce .2s cubic-bezier(.91,1.76,.83,.67);
+
+		&Open {
+			@apply flex;
+			z-index: 100;
+		}
+	}
+
+	@media (max-width: 450px) {
+		width: 100%;
+	}
+}
+
+.buttons {
+	@apply flex gap-4 relative;
+
+	button {
+		@apply w-full flex items-center justify-center;
+
+		@media (max-width: 768px) {
+			@apply bg-slate-200 p-3;
+		}
+	}
+
+	a {
+		@apply w-full;
+	}
+}
+
+.burger {
+	display: none;
+
+	@media (max-width: 768px) {
+		display: block;
+		z-index: 100;
+	}
+}
+
+.logo {
+	@apply hover:opacity-60 transition-opacity absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	@media (max-width: 768px) {
+		@apply static;
+
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes bounce {
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	50% {
+		opacity: 0.3;
+		transform: scale(1.1);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

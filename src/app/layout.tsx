@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={clsx(montserrat.className, 'container mx-auto')}>
+			<body className={clsx(montserrat.className, 'container mx-auto px-5')}>
 				<Header />
 				<main>{children}</main>
 			</body>

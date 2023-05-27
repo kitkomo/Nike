@@ -1,27 +1,61 @@
+'use client'
+
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
 import logo from '@/assets/images/logoBlack.svg'
 
+import ButtonShell from '../ui/ButtonShell/ButtonShell'
 import HeroIcon from '../ui/HeroIcon/HeroIcon'
 
+import cl from './Header.module.scss'
 import Navigation from './Navigation/Navigation'
 
 const Header: FC = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
 	return (
-		<header className="mx-auto flex justify-between py-4">
-			<div className="max-w-xs flex-grow">
-				<Navigation />
-			</div>
-			<Link href="/">
-				<Image src={logo} width={70} height={25} alt="nike" />
-			</Link>
-			<div className="max-w-xs flex flex-grow justify-end">
-				<HeroIcon name="HiMagnifyingGlass" size={20}/>
-				<HeroIcon name="HiUser" size={20}/>
-			</div>
-		</header>
+		<>
+			{isMenuOpen && (
+				<div
+					className={clsx(cl.backdrop)}
+					onClick={() => setIsMenuOpen(!isMenuOpen)}
+				></div>
+			)}
+			<header className={cl.header}>
+				<div
+					className={clsx(cl.navWrapper, {
+						[cl.navWrapperOpen]: isMenuOpen
+					})}
+				>
+					<Navigation />
+					<div className={cl.buttons}>
+						<ButtonShell title="search">
+							<HeroIcon name="HiMagnifyingGlass" size={20} />
+						</ButtonShell>
+						<ButtonShell title="Cart">
+							<HeroIcon name="HiOutlineShoppingBag" size={20} />
+						</ButtonShell>
+						<Link href="/account" className="flex items-center">
+							<ButtonShell title="account">
+								<HeroIcon name="HiOutlineUser" size={20} />
+							</ButtonShell>
+						</Link>
+					</div>
+				</div>
+
+				<Link href="/" className={cl.logo}>
+					<Image src={logo} width={70} height={25} alt="nike" />
+				</Link>
+				<div className={cl.burger}>
+					<ButtonShell title="menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+						<HeroIcon name="HiOutlineBars3BottomRight" size={20} />
+					</ButtonShell>
+				</div>
+			</header>
+		</>
 	)
 }
 
