@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-
+import cl from './ButtonShell.module.scss'
 type ButtonShellProps = {
 	children: ReactNode
 	title?: string
@@ -10,7 +10,7 @@ const ButtonShell: FC<ButtonShellProps> = ({ children, title, onClick }) => {
 	return (
 		<button
 			title={title}
-			className="hover:bg-slate-200 p-2 rounded-md cursor-pointer transition-colors sm:p-1"
+			className={cl.button}
 			onClick={onClick}
 		>
 			{children}

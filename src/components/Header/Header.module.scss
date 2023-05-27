@@ -24,14 +24,14 @@
 	@apply flex gap-4 text-sm font-medium;
 
 	@media (max-width: 450px) {
-			@apply flex-col;
-		}
+		@apply flex-col;
+	}
 
 	.navItem {
-		@apply hover:text-neutral-400 transition-colors;
+		@apply md:hover:text-neutral-400 active:text-neutral-400  transition-colors;
 
 		@media (max-width: 768px) {
-			@apply text-lg;
+			@apply text-base;
 		}
 	}
 }
@@ -43,7 +43,7 @@
 		@apply absolute flex-col gap-5 items-stretch right-0 bg-neutral-100 px-10 py-5 rounded-lg drop-shadow-2xl;
 		top: 100%;
 		display: none;
-		animation: bounce .2s cubic-bezier(.91,1.76,.83,.67);
+		animation: bounce 0.2s cubic-bezier(0.91, 1.76, 0.83, 0.67);
 
 		&Open {
 			@apply flex;
@@ -63,7 +63,7 @@
 		@apply w-full flex items-center justify-center;
 
 		@media (max-width: 768px) {
-			@apply bg-slate-200 p-3;
+			@apply bg-slate-200 p-3 active:bg-slate-300;
 		}
 	}
 

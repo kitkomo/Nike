@@ -1,0 +1,7 @@
+.button {
+	@apply md:hover:bg-slate-200 p-1 rounded-md cursor-pointer transition-colors;
+
+	@media (max-width: 768px) {
+		@apply p-2 bg-slate-100 active:bg-slate-200;
+	}
+}
