@@ -4,6 +4,7 @@ import { Montserrat } from 'next/font/google'
 import Header from '@/components/Header/Header'
 
 import '@/assets/scss/index.scss'
+import Footer from '@/components/Footer/Footer'
 
 // If loading a variable font, you don't need to specify the font weight
 const montserrat = Montserrat({
@@ -23,9 +24,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={clsx(montserrat.className, 'container mx-auto px-5')}>
-				<Header />
-				<main>{children}</main>
+			<body className={clsx(montserrat.className)}>
+				<div className="wrapper">
+					<Header />
+				</div>
+				<main style={{overflowX: 'hidden'}}>{children}</main>
+				<Footer/>
 			</body>
 		</html>
 	)

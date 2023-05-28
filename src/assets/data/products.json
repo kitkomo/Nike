@@ -1,0 +1,83 @@
+[
+	{
+		"id": 1,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	},
+	{
+		"id": 2,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	},
+	{
+		"id": 3,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	},
+	{
+		"id": 4,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	},
+	{
+		"id": 5,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	},
+	{
+		"id": 6,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	},
+	{
+		"id": 7,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	},
+	{
+		"id": 8,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	},
+	{
+		"id": 9,
+		"name": "Air mAx Pulse",
+		"description": "бля шо за тяги",
+		"category": "classic",
+		"gender": "Men",
+		"img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0b94722-d603-4e66-829c-51f1801ec3fa/air-max-pulse-mens-shoes-ShS3tL.png",
+		"price": 125
+	}
+]

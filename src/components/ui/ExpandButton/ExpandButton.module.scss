@@ -1,0 +1,7 @@
+.default {
+	@apply bg-black text-white text-sm font-medium uppercase rounded-full py-2 px-6 md:hover:px-12 transition-all;
+}
+
+.light {
+	@apply bg-white text-black;
+}

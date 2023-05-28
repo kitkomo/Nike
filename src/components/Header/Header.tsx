@@ -35,7 +35,7 @@ const Header: FC = () => {
 						<ButtonShell title="search">
 							<HeroIcon name="HiMagnifyingGlass" size={20} />
 						</ButtonShell>
-						<ButtonShell title="Cart">
+						<ButtonShell title="cart">
 							<HeroIcon name="HiOutlineShoppingBag" size={20} />
 						</ButtonShell>
 						<Link href="/account" className="flex items-center">
@@ -47,7 +47,7 @@ const Header: FC = () => {
 				</div>
 
 				<Link href="/" className={cl.logo}>
-					<Image src={logo} width={70} height={25} alt="nike" />
+					<Image src={logo} width={60} alt="nike" />
 				</Link>
 				<div className={cl.burger}>
 					<ButtonShell title="menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>

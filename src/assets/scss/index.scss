@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::selection {
+	background: #ffb7b7;
+}
+
+* {
+	outline-color: #9384d1;
+}
+
+.wrapper {
+	@apply max-w-7xl mx-auto px-5;
+}

@@ -1,0 +1,7 @@
+.info {
+	@apply flex gap-5 mt-2 md:text-sm text-xs group-hover:translate-y-3 transition-all delay-0 ease-in-out duration-300;
+}
+
+.white {
+	@apply text-white;
+}

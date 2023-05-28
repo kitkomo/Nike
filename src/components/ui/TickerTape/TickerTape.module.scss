@@ -1,0 +1,32 @@
+.ticker {
+	position: relative;
+	overflow: hidden;
+}
+
+.ticker__wrapper {
+	display: flex;
+}
+
+.ticker__item {
+	font-size: 5vw;
+	text-transform: uppercase;
+	white-space: nowrap;
+	flex-shrink: 0;
+	padding: 0 2vw;
+	animation: ticker 5s linear infinite;
+	opacity: 0.2;
+
+	@media (min-width: 1500px) {
+		font-size: 75px;
+		padding: 0 29px;
+	}
+}
+
+@keyframes ticker {
+	0% {
+		transform: translateZ(0);
+	}
+	to {
+		transform: translate3d(-100%, 0, 0);
+	}
+}

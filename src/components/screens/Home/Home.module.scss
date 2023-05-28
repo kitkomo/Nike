@@ -1,0 +1,143 @@
+.hero {
+	@apply relative flex items-center gap-10 mt-20;
+
+	@media (max-width: 768px) {
+		@apply flex-col items-start;
+	}
+
+	> h1 {
+		@apply uppercase text-9xl font-black tracking-widest;
+
+		> span {
+			@apply text-7xl leading-relaxed;
+			display: block;
+			background: rgb(131, 58, 180);
+			background: linear-gradient(90deg, #30a2ff 0%, #f266ab 50%, #9384d1 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		@media (max-width: 1120px) {
+			@apply text-8xl;
+
+			> span {
+				@apply text-6xl leading-relaxed;
+			}
+		}
+
+		@media (max-width: 900px) {
+			@apply text-7xl;
+
+			> span {
+				@apply text-5xl leading-relaxed;
+			}
+		}
+
+		@media (max-width: 768px) {
+			font-size: 20vw;
+			> span {
+				font-size: 10vw;
+			}
+		}
+	}
+
+	.heroPromo {
+		@apply rounded-3xl drop-shadow-2xl;
+
+		overflow: hidden;
+		> video {
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
+
+.categories {
+	@apply flex gap-6;
+
+	@media (max-width: 768px) {
+		@apply gap-2;
+	}
+
+	@media (max-width: 600px) {
+		@apply grid grid-cols-2 grid-rows-2;
+	}
+}
+
+.acgSection {
+	@apply mt-20 mb-10 pt-36 pb-10;
+
+	@media (max-width: 800px) {
+		@apply pt-20;
+	}
+}
+
+.acg {
+	@apply relative flex items-center justify-center;
+	.acgVideo {
+		@apply rounded-xl drop-shadow-2xl;
+		overflow: hidden;
+
+		> video {
+			max-width: 500px;
+			aspect-ratio: 1 / 0.8;
+			object-fit: cover;
+			object-position: center;
+			transform: scale(1.4);
+		}
+	}
+
+	.acgTitle {
+		> h2 {
+			@apply font-bold absolute whitespace-nowrap uppercase mix-blend-difference text-center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 15vw;
+			color: #99A98F;
+
+			@media (min-width: 1500px) {
+				font-size: 225px;
+			}
+		}
+	}
+}
+
+.bannerMembership {
+	@apply overflow-hidden rounded-3xl bg-center bg-cover py-16 relative shadow-2xl;
+
+	> .bannerContent {
+		@apply text-white px-6 z-10 relative;
+
+		> h2 {
+			@apply text-3xl md:text-5xl uppercase font-extrabold;
+		}
+
+		> p {
+			@apply text-sm mt-4;
+		}
+
+		> div {
+			@apply flex gap-2 mt-4;
+
+			> button {
+				@apply text-sm capitalize py-1 hover:px-6 active:bg-gray-300 md:hover:bg-gray-300 transition-colors;
+			}
+		}
+	}
+
+	.backdrop {
+		display: none;
+
+		@media (max-width: 590px) {
+			z-index: 0;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($color: #000000, $alpha: 0.8);
+		}
+	}
+}

@@ -9,7 +9,7 @@
 .backdrop {
 	display: none;
 	@media (max-width: 768px) {
-		@apply backdrop-blur-sm animate-fade;
+		@apply backdrop-blur-sm animate-fade bg-slate-500 bg-opacity-30;
 		position: fixed;
 		display: block;
 		top: 0;
@@ -28,7 +28,7 @@
 	}
 
 	.navItem {
-		@apply md:hover:text-neutral-400 active:text-neutral-400  transition-colors;
+		@apply md:hover:text-neutral-400 active:text-neutral-400 transition-colors;
 
 		@media (max-width: 768px) {
 			@apply text-base;
